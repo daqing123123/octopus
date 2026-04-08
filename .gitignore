@@ -1,0 +1,89 @@
+# ========================================
+# 八爪鱼 Octopus - GitHub开源版本
+# ========================================
+
+# 核心私有文件（不上传）
+PRIVATE/
+private/
+core/
+ai-models/
+prompts/
+business-logic/
+
+# 环境配置
+.env
+.env.local
+.env.production
+.env.*.local
+*.env
+
+# 数据库
+*.db
+*.sqlite
+*.sqlite3
+data/
+database/
+postgres-data/
+
+# 用户数据
+user-data/
+uploads/
+storage/
+
+# 密钥和证书
+*.pem
+*.key
+*.crt
+secrets/
+certificates/
+
+# 测试覆盖率
+coverage/
+
+# 日志
+logs/
+*.log
+npm-debug.log*
+
+# 依赖
+node_modules/
+
+# 构建产物
+dist/
+build/
+.next/
+out/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# 临时文件
+tmp/
+temp/
+.cache/
+
+# 测试覆盖率
+coverage/
+
+# 备份
+*.bak
+*.backup
+backup/
+
+# 离线包（本地开发用）
+offline/
+local-only/
+
+# 私有配置
+private-config.json
+license-server/
+billing/
+payment/
