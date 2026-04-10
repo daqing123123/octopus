@@ -36,6 +36,8 @@ import onboardingWizardRoutes from './routes/onboarding-wizard.routes'
 import directoryRoutes from './routes/directory.routes'
 import profileCompletenessRoutes from './routes/profile-completeness.routes'
 import meetingRoutes from './routes/meeting.routes'
+import connectionCapabilityRoutes from './routes/connection-capability.routes'
+import enterpriseCapabilityAdminRoutes from './routes/enterprise-capability-admin.routes'
 
 dotenv.config()
 
@@ -169,6 +171,9 @@ async function registerRoutes() {
   fastify.register(directoryRoutes, { prefix: '/api' })             // 通讯录 & 组织架构
   fastify.register(profileCompletenessRoutes, { prefix: '/api' })   // 档案完善度评分
   fastify.register(meetingRoutes, { prefix: '/api' })               // 视频会议
+  // 连接即获取企业能力路由
+  fastify.register(connectionCapabilityRoutes, { prefix: '/api' })   // 触手获取企业能力
+  fastify.register(enterpriseCapabilityAdminRoutes, { prefix: '/api/admin' })  // 管理员配置能力
 }
 
 // 健康检查函数
