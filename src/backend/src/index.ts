@@ -38,6 +38,11 @@ import profileCompletenessRoutes from './routes/profile-completeness.routes'
 import meetingRoutes from './routes/meeting.routes'
 import connectionCapabilityRoutes from './routes/connection-capability.routes'
 import enterpriseCapabilityAdminRoutes from './routes/enterprise-capability-admin.routes'
+import knowledgeSearchRoutes from './routes/knowledge-search.routes'
+import workflowEngineRoutes from './routes/workflow-engine.routes'
+import directoryOrgRoutes from './routes/directory-org.routes'
+import onboardingWizard2Routes from './routes/onboarding-wizard2.routes'
+import messagesSummaryRoutes from './routes/messages-summary.routes'
 
 dotenv.config()
 
@@ -174,6 +179,16 @@ async function registerRoutes() {
   // 连接即获取企业能力路由
   fastify.register(connectionCapabilityRoutes, { prefix: '/api' })   // 触手获取企业能力
   fastify.register(enterpriseCapabilityAdminRoutes, { prefix: '/api/admin' })  // 管理员配置能力
+  // 知识搜索路由
+  fastify.register(knowledgeSearchRoutes, { prefix: '/api' })         // 企业知识AI搜索
+  // 工作流引擎路由
+  fastify.register(workflowEngineRoutes, { prefix: '/api' })        // 工作流执行引擎
+  // 通讯录路由
+  fastify.register(directoryOrgRoutes, { prefix: '/api' })          // 通讯录与组织架构
+  // 入职向导2.0路由
+  fastify.register(onboardingWizard2Routes, { prefix: '/api' })      // 智能入职向导
+  // 消息摘要路由
+  fastify.register(messagesSummaryRoutes, { prefix: '/api' })       // 消息摘要与数据导出
 }
 
 // 健康检查函数
