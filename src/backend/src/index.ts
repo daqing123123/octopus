@@ -43,6 +43,8 @@ import workflowEngineRoutes from './routes/workflow-engine.routes'
 import directoryOrgRoutes from './routes/directory-org.routes'
 import onboardingWizard2Routes from './routes/onboarding-wizard2.routes'
 import messagesSummaryRoutes from './routes/messages-summary.routes'
+import realtimeCollaborationRoutes from './routes/realtime-collaboration.routes'
+import videoMeetingRoutes from './routes/video-meeting.routes'
 
 dotenv.config()
 
@@ -189,6 +191,10 @@ async function registerRoutes() {
   fastify.register(onboardingWizard2Routes, { prefix: '/api' })      // 智能入职向导
   // 消息摘要路由
   fastify.register(messagesSummaryRoutes, { prefix: '/api' })       // 消息摘要与数据导出
+  // 实时协作路由
+  fastify.register(realtimeCollaborationRoutes, { prefix: '/api' })   // 实时协作
+  // 视频会议路由
+  fastify.register(videoMeetingRoutes, { prefix: '/api' })           // 视频会议
 }
 
 // 健康检查函数
