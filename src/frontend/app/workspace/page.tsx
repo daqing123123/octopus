@@ -20,6 +20,7 @@ import {
   NotificationCenterPage, OnboardingWizardPage,
   DirectoryOrgChartPage, ProfileCompletenessPage, VideoMeetingPage
 } from '@/components/Claw'
+import CollaborationPage from './collaboration/page'
 import { useRouter } from 'next/navigation'
 
 export default function Workspace() {
@@ -52,6 +53,8 @@ export default function Workspace() {
         return <TablePage />
       case 'documents':
         return <DocumentPage />
+      case 'collaboration':
+        return <CollaborationPage />
       case 'tasks':
         return <TaskPage />
       case 'ai':

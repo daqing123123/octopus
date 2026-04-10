@@ -48,6 +48,7 @@ const menuItems = [
   { id: 'tasks', icon: '✅', label: '任务' },
   { id: 'tables', icon: '📊', label: '多维表格' },
   { id: 'documents', icon: '📝', label: '云文档' },
+  { id: 'collaboration', icon: '🚀', label: '协作空间', desc: '评论·权限·任务' },
   { id: 'ai', icon: '🤖', label: 'AI助手' },
   { id: 'meetings', icon: '📹', label: '视频会议' },
   { id: 'directory', icon: '👥', label: '通讯录' },

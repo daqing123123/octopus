@@ -45,6 +45,8 @@ import onboardingWizard2Routes from './routes/onboarding-wizard2.routes'
 import messagesSummaryRoutes from './routes/messages-summary.routes'
 import realtimeCollaborationRoutes from './routes/realtime-collaboration.routes'
 import videoMeetingRoutes from './routes/video-meeting.routes'
+import permissionRoutes from './routes/permission.routes'
+import collaborationRoutes from './routes/collaboration.routes'
 
 dotenv.config()
 
@@ -195,6 +197,10 @@ async function registerRoutes() {
   fastify.register(realtimeCollaborationRoutes, { prefix: '/api' })   // 实时协作
   // 视频会议路由
   fastify.register(videoMeetingRoutes, { prefix: '/api' })           // 视频会议
+  // 统一权限管理路由
+  fastify.register(permissionRoutes, { prefix: '/api' })             // 权限系统
+  // 多人协作路由（评论 + 任务关联）
+  fastify.register(collaborationRoutes, { prefix: '/api' })          // 评论 + 协作会话 + 任务关联
 }
 
 // 健康检查函数
