@@ -47,6 +47,7 @@ import realtimeCollaborationRoutes from './routes/realtime-collaboration.routes'
 import videoMeetingRoutes from './routes/video-meeting.routes'
 import permissionRoutes from './routes/permission.routes'
 import collaborationRoutes from './routes/collaboration.routes'
+import offboardingRoutes from './routes/offboarding.routes'
 
 dotenv.config()
 
@@ -201,6 +202,8 @@ async function registerRoutes() {
   fastify.register(permissionRoutes, { prefix: '/api' })             // 权限系统
   // 多人协作路由（评论 + 任务关联）
   fastify.register(collaborationRoutes, { prefix: '/api' })          // 评论 + 协作会话 + 任务关联
+  // 离职阶段路由
+  fastify.register(offboardingRoutes, { prefix: '/api/offboarding' })  // 离职管理
 }
 
 // 健康检查函数

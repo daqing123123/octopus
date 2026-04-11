@@ -55,6 +55,7 @@ const menuItems = [
   { id: 'files', icon: '📁', label: '文件' },
   { id: 'okr', icon: '🎯', label: 'OKR' },
   { id: 'calendar', icon: '📅', label: '日历' },
+  { id: 'offboarding', icon: '👋', label: '离职管理', desc: '交接·权限·导出' },
 ]
 
 const clawMenuItems = [

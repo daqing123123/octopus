@@ -21,6 +21,7 @@ import {
   DirectoryOrgChartPage, ProfileCompletenessPage, VideoMeetingPage
 } from '@/components/Claw'
 import CollaborationPage from './collaboration/page'
+import { OffboardingPanel } from '@/components/Offboarding'
 import { useRouter } from 'next/navigation'
 
 export default function Workspace() {
@@ -120,6 +121,8 @@ export default function Workspace() {
         ) : (
           <div className="p-6 text-center text-gray-500">请先选择一个企业</div>
         )
+      case 'offboarding':
+        return <OffboardingPanel enterpriseId={currentEnterprise || undefined} />
       default:
         return <Dashboard />
     }
